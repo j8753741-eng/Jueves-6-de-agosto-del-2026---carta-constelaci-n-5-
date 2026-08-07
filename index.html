@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>✦ Donde La Noche Escondió Su Último Milagro ✦</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#2f2553 0%,#171226 40%,#09090f 100%);
+
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+color:#fdf8f0;
+
+}
+
+/*==========================
+      CIELO
+==========================*/
+
+.sky{
+
+position:fixed;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:-5;
+
+}
+
+.sky span{
+
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+opacity:.4;
+animation:twinkle linear infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.15;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.7);
+}
+
+}
+
+/*==========================
+     AURORAS
+==========================*/
+
+.aurora{
+
+position:fixed;
+width:900px;
+height:900px;
+border-radius:50%;
+filter:blur(140px);
+opacity:.18;
+animation:moveAurora 22s ease-in-out infinite alternate;
+z-index:-4;
+
+}
+
+.a1{
+
+background:#b789ff;
+top:-280px;
+left:-250px;
+
+}
+
+.a2{
+
+background:#7ac9ff;
+bottom:-350px;
+right:-220px;
+animation-duration:28s;
+
+}
+
+@keyframes moveAurora{
+
+from{
+transform:translateY(0px) translateX(0px);
+}
+
+to{
+transform:translateY(120px) translateX(70px);
+}
+
+}
+
+/*==========================
+ CONTENEDOR
+==========================*/
+
+.wrapper{
+
+width:min(920px,92%);
+margin:auto;
+padding:90px 0 120px;
+
+}
+
+/*==========================
+     PORTADA
+==========================*/
+
+.hero{
+
+text-align:center;
+margin-bottom:80px;
+
+}
+
+.constellation{
+
+font-size:40px;
+letter-spacing:14px;
+color:#f7d98f;
+margin-bottom:30px;
+animation:shine 4s ease-in-out infinite;
+
+}
+
+@keyframes shine{
+
+50%{
+opacity:.45;
+text-shadow:
+0 0 25px rgba(255,230,170,.9);
+}
+
+}
+
+.title{
+
+font-family:'Cinzel',serif;
+font-size:clamp(2.2rem,5vw,3.8rem);
+line-height:1.45;
+color:#fff8ef;
+font-weight:700;
+
+text-shadow:
+
+0 0 15px rgba(255,220,170,.25),
+0 0 45px rgba(255,220,170,.12);
+
+margin-bottom:30px;
+
+}
+
+.date{
+
+display:inline-block;
+
+padding:14px 26px;
+
+border:1px solid rgba(255,255,255,.18);
+
+border-radius:999px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(12px);
+
+font-size:1.08rem;
+letter-spacing:2px;
+color:#efe8dc;
+
+}
+
+/*==========================
+ MARCO DEL POEMA
+==========================*/
+
+.poem{
+
+position:relative;
+
+padding:70px 60px;
+
+border-radius:34px;
+
+background:
+
+linear-gradient(rgba(255,255,255,.05),
+rgba(255,255,255,.02));
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.09);
+
+box-shadow:
+
+0 0 50px rgba(0,0,0,.35),
+0 0 100px rgba(255,220,170,.06);
+
+overflow:hidden;
+
+}
+
+.poem::before{
+
+content:"";
+
+position:absolute;
+
+inset:18px;
+
+border:1px solid rgba(255,223,170,.12);
+
+border-radius:26px;
+
+pointer-events:none;
+
+}
+
+.poem::after{
+
+content:"✦";
+
+position:absolute;
+
+top:18px;
+right:28px;
+
+font-size:28px;
+
+color:#f5d28b;
+
+animation:starSpin 12s linear infinite;
+
+}
+
+@keyframes starSpin{
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+/*==========================
+   VERSOS
+==========================*/
+
+.stanza{
+
+margin:55px 0;
+
+position:relative;
+
+padding-left:35px;
+
+}
+
+.stanza::before{
+
+content:"✧";
+
+position:absolute;
+
+left:0;
+top:2px;
+
+font-size:22px;
+
+color:#eec97b;
+
+}
+
+.line{
+
+display:block;
+
+font-size:2rem;
+
+line-height:1.95;
+
+color:#fffdf9;
+
+text-shadow:
+
+0 0 18px rgba(255,255,255,.06);
+
+animation:fadeUp .9s ease both;
+
+}
+
+.line.soft{
+
+color:#efe5d5;
+font-size:1.8rem;
+
+}
+
+.line.gold{
+
+color:#f8d98b;
+
+}
+
+.space{
+
+height:20px;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(28px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+
+.divider{
+
+margin:60px auto;
+
+width:180px;
+height:1px;
+
+background:
+
+linear-gradient(to right,
+transparent,
+#f5d28a,
+transparent);
+
+position:relative;
+
+}
+
+.divider::after{
+
+content:"✦";
+
+position:absolute;
+
+left:50%;
+top:-15px;
+
+transform:translateX(-50%);
+
+background:#18131f;
+
+padding:0 12px;
+
+color:#f4d48f;
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+.poem{
+
+padding:45px 28px;
+
+}
+
+.line{
+
+font-size:1.55rem;
+line-height:1.85;
+
+}
+
+.line.soft{
+
+font-size:1.42rem;
+
+}
+
+.title{
+
+font-size:2rem;
+
+}
+
+.constellation{
+
+font-size:28px;
+letter-spacing:8px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sky"></div>
+
+<div class="aurora a1"></div>
+<div class="aurora a2"></div>
+
+<div class="wrapper">
+
+<header class="hero">
+
+<div class="constellation">
+✦ ✧ ✦
+</div>
+
+<h1 class="title">
+DONDE LA NOCHE ESCONDIÓ SU ÚLTIMO MILAGRO<br>
+PARA QUE YO PUDIERA LLAMARTE<br>
+«MI AURORA DE ÉBANO»
+</h1>
+
+<div class="date">
+Jueves • 6 de agosto de 2026 • Por la noche
+</div>
+
+</header>
+
+<section class="poem">
+
+<div class="stanza">
+
+<span class="line gold">
+Esta noche el universo hizo algo
+que jamás había hecho.
+</span>
+
+<div class="space"></div>
+
+<span class="line">
+No encendió las estrellas
+para iluminar el cielo...
+</span>
+
+<div class="space"></div>
+
+<span class="line soft">
+Las encendió porque quería aprender
+cómo brilla tu alma.
+</span>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="stanza">
+
+<span class="line">
+Y yo,
+que llevo tantos latidos
+pronunciando tu nombre,
+</span>
+
+<div class="space"></div>
+
+<span class="line">
+descubrí que todavía existe
+una forma nueva
+de enamorarme de ti.
+</span>
+
+<div class="space"></div>
+
+<span class="line gold">
+Porque contigo,
+amor mío,
+cada día es el primero.
+</span>
+
+<div class="space"></div>
+
+<span class="line">
+Y cada noche
+es la última oportunidad
+que tiene mi corazón
+para demostrarte
+que todavía no ha llegado
+al límite
+de todo lo que puede amarte.
+</span>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="stanza">
+
+<span class="line gold">
+Mi Aurora de Ébano...
+</span>
+
+<div class="space"></div>
+
+<span class="line">
+Nadie antes
+había merecido
+un nombre así.
+</span>
+
+<div class="space"></div>
+
+<span class="line soft">
+Porque eres esa mezcla imposible
+entre la calma de la madrugada,
+la fuerza de un universo entero
+y la dulzura
+que solamente poseen
+las personas que nacieron
+para convertirse en hogar.
+</span>
+
+  </div>
+
+          <div class="divider">
+            <span>✦</span>
+        </div>
+
+        <div class="stanza">
+
+            <span class="line">
+                Cuando pienso en ti,
+                el tiempo deja de correr.
+            </span>
+
+            <span class="line soft">
+                Se sienta conmigo.
+            </span>
+
+            <span class="line soft">
+                Escucha cómo pronuncio tu nombre.
+            </span>
+
+            <span class="line">
+                Y comprende
+                que existen amores
+                que no necesitan siglos
+                para volverse eternos.
+            </span>
+
+            <span class="line gold">
+                Porque el nuestro
+                nació sabiendo exactamente
+                a dónde pertenecía.
+            </span>
+
+            <span class="line">
+                Pertenece a tus manos.
+            </span>
+
+            <span class="line">
+                A tu sonrisa.
+            </span>
+
+            <span class="line">
+                A tus ojos.
+            </span>
+
+            <span class="line soft">
+                A esa manera tan tuya de existir
+                y convertir cualquier instante sencillo
+                en el recuerdo más hermoso
+                de toda mi vida.
+            </span>
+
+        </div>
+
+        <div class="divider">
+            <span>✦</span>
+        </div>
+
+        <div class="stanza">
+
+            <span class="line">
+                Si pudiera abrir mi pecho esta noche,
+                no encontrarías un corazón.
+            </span>
+
+            <span class="line gold">
+                Encontrarías un cielo.
+            </span>
+
+            <span class="line">
+                Y en cada estrella
+                estaría escrita
+                una razón distinta
+                por la que te amo.
+            </span>
+
+            <span class="line">
+                Una diría
+                que eres mi paz.
+            </span>
+
+            <span class="line">
+                Otra
+                que eres mi alegría.
+            </span>
+
+            <span class="line">
+                Otra
+                que llegaste para enseñarme
+                que el amor verdadero
+                no hace ruido...
+            </span>
+
+            <span class="line gold">
+                late.
+            </span>
+
+            <span class="line soft">
+                Y las más brillantes
+                llevarían solamente tu nombre,
+                porque ninguna palabra
+                sería suficiente
+                para explicar
+                todo lo que provocas dentro de mí.
+            </span>
+
+        </div>
+
+        <div class="divider">
+            <span>✦</span>
+        </div>
+
+        <div class="stanza">
+
+            <span class="line gold">
+                Mi Aurora de Ébano...
+            </span>
+
+            <span class="line">
+                A veces imagino
+                que el destino
+                estaba escribiendo
+                nuestra historia
+                muchísimo antes
+                de que nos conociéramos.
+            </span>
+
+            <span class="line">
+                Quizá por eso
+                cada camino que recorrí,
+                cada espera,
+                cada lágrima,
+                cada victoria,
+                cada noche de incertidumbre...
+            </span>
+
+            <span class="line gold">
+                terminó llevándome
+                exactamente hasta ti.
+            </span>
+
+            <span class="line soft">
+                Como si el universo entero
+                hubiera trabajado en silencio
+                solamente para regalarme
+                el milagro de encontrarte.
+            </span>
+
+            <span class="line">
+                Y qué hermoso fue hacerlo.
+            </span>
+
+        </div>
+
+        <div class="divider">
+            <span>✦</span>
+        </div>
+
+        <div class="stanza">
+
+            <span class="line">
+                Porque desde entonces
+                el amor dejó de ser
+                una palabra.
+            </span>
+
+            <span class="line gold">
+                Ahora tiene tu voz.
+            </span>
+
+            <span class="line">
+                Tu risa.
+            </span>
+
+            <span class="line">
+                Tu forma de mirarme.
+            </span>
+
+            <span class="line soft">
+                Tu manera de hacer
+                que mi mundo
+                se vuelva inmenso
+                simplemente
+                porque estás en él.
+            </span>
+
+        </div>
+
+        <div class="divider">
+            <span>✦</span>
+        </div>
+
+        <div class="stanza">
+
+            <span class="line">
+                No quiero prometerte
+                un amor perfecto.
+            </span>
+
+            <span class="line gold">
+                Quiero ofrecerte
+                algo mucho más valioso.
+            </span>
+
+            <span class="line">
+                Un amor
+                que jamás deje
+                de elegirte.
+            </span>
+
+            <span class="line">
+                Un amor
+                que permanezca
+                cuando el cansancio llegue.
+            </span>
+
+            <span class="line">
+                Cuando existan problemas.
+            </span>
+
+            <span class="line">
+                Cuando el mundo
+                parezca demasiado grande.
+            </span>
+
+            <span class="line soft">
+                Quiero ser ese abrazo
+                que siempre encuentre
+                el camino de regreso hacia ti.
+            </span>
+
+            <span class="line">
+                Ese refugio
+                donde puedas descansar el alma.
+            </span>
+
+            <span class="line gold">
+                Ese lugar donde nunca tengas
+                que fingir ser fuerte,
+                porque yo estaré sosteniendo
+                tus miedos
+                con el mismo cuidado
+                con el que sostengo
+                cada uno de tus sueños.
+            </span>
+
+        </div>
+
+          <div class="divider"></div>
+
+        <div class="stanza">
+
+            <span class="line">
+                Porque amarte
+                también significa proteger
+                aquello que hace latir
+                tu corazón.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line soft">
+                Y yo quiero cuidar de él
+                como si fuera
+                el mayor tesoro
+                que existe
+                bajo todas las estrellas.
+            </span>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stanza">
+
+            <span class="line gold">
+                Esta noche cierro los ojos
+                e imagino un futuro contigo.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                No veo lujos.
+            </span>
+
+            <span class="line">
+                No veo castillos.
+            </span>
+
+            <span class="line">
+                No veo riquezas.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line soft">
+                Veo algo mucho más hermoso.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                Nos veo riéndonos
+                por cualquier tontería.
+            </span>
+
+            <span class="line">
+                Tomados de la mano.
+            </span>
+
+            <span class="line">
+                Mirándonos como si el tiempo
+                todavía estuviera aprendiendo
+                cómo se ama de verdad.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                Veo noches tranquilas.
+            </span>
+
+            <span class="line">
+                Abrazos interminables.
+            </span>
+
+            <span class="line">
+                Besos que lleguen
+                después de los días difíciles.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line gold">
+                Y una vida entera
+                en la que jamás dejemos
+                de sorprendernos
+                por la inmensa suerte
+                de habernos encontrado.
+            </span>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stanza">
+
+            <span class="line">
+                Porque si alguna vez
+                la eternidad decide preguntarme
+                cuál fue el instante
+                más hermoso
+                que viví en la Tierra...
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                No señalaré una fecha.
+            </span>
+
+            <span class="line gold">
+                Te señalaré a ti.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line soft">
+                Porque el momento más hermoso
+                de mi existencia
+                fue aquel
+                en el que comenzaste
+                a formar parte de ella.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                Y desde entonces,
+                cada latido
+                lleva tu nombre escondido.
+            </span>
+
+            <span class="line">
+                Cada sueño
+                te pertenece un poco.
+            </span>
+
+            <span class="line">
+                Cada oración
+                termina hablándole a Dios
+                de la mujer maravillosa
+                que convirtió mi vida
+                en el lugar
+                más bonito del universo.
+            </span>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stanza">
+
+            <span class="line gold">
+                Así que esta noche,
+                mientras las estrellas
+                continúan vigilando el cielo,
+                yo solamente quiero
+                hacer una promesa silenciosa.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                Seguiré enamorándome de ti
+                una y otra vez.
+            </span>
+
+            <span class="line">
+                Con la misma emoción
+                del primer día.
+            </span>
+
+            <span class="line">
+                Con más fuerza que ayer.
+            </span>
+
+            <span class="line">
+                Y con menos límite
+                que mañana.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line soft">
+                Porque si existe algo
+                más grande que el universo...
+            </span>
+
+            <span class="line gold">
+                es todo el amor
+                que mi corazón
+                seguirá inventando para ti.
+            </span>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stanza">
+
+            <span class="line">
+                Y mientras exista
+                una sola noche,
+                un solo amanecer,
+                un solo latido
+                dentro de mí...
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line gold">
+                seguiré amándote
+                como si Dios hubiera creado
+                el infinito
+                únicamente
+                para intentar acercarse,
+                aunque sea un poco,
+                a todo lo que siento por ti.
+            </span>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stanza" style="text-align:center;">
+
+            <span class="line gold">
+                Buenas noches,
+                mi Aurora de Ébano.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line soft">
+                Que los sueños
+                te abracen
+                con la misma ternura
+                con la que mi alma
+                abraza tu existencia.
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line">
+                Y que mañana,
+                cuando vuelvas a sonreír,
+            </span>
+
+            <span class="line">
+                el universo recuerde nuevamente
+            </span>
+
+            <span class="line gold">
+                que su obra más perfecta...
+            </span>
+
+            <div class="space"></div>
+
+            <span class="line" style="font-size:2.5rem;">
+                siempre serás tú. ❤️
+            </span>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+
+const sky=document.querySelector(".sky");
+
+for(let i=0;i<180;i++){
+
+const star=document.createElement("span");
+
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+
+const size=Math.random()*3+1;
+
+star.style.width=size+"px";
+star.style.height=size+"px";
+
+star.style.animationDuration=(2+Math.random()*6)+"s";
+star.style.animationDelay=(Math.random()*6)+"s";
+
+sky.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
